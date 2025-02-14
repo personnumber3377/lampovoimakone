@@ -7,11 +7,14 @@
 0.0067308
 
 '''
-
+painemuutokset = []
+tilevuusmuutokset = []
 # 50 g tapaus
 x_diff = 8.25*10**(-6) - (-2.4*(10**(-6)))
 y_diff = abs(0.446 - 1.078)*1000 # Times a thousand for kilopascals
 
+painemuutokset.append(x_diff)
+tilevuusmuutokset.append(y_diff)
 area = x_diff*y_diff
 print("Pinta-ala (50g): "+str(area))
 
@@ -25,6 +28,9 @@ print("Pinta-ala (50g): "+str(area))
 x_diff = (8.33*(10**(-6))) - (-1.05*10**(-6))
 y_diff = abs(0.443 - 1.62)*1000
 
+painemuutokset.append(x_diff)
+tilevuusmuutokset.append(y_diff)
+
 area = x_diff*y_diff
 print("Pinta-ala (100g): "+str(area))
 
@@ -34,7 +40,11 @@ print("Pinta-ala (100g): "+str(area))
 
 x_diff = (1*(10**(-5))) - (-1.25*10**(-6))
 y_diff = abs(0.507 - 2.31)*1000
-
+painemuutokset.append(x_diff)
+tilevuusmuutokset.append(y_diff)
 area = x_diff*y_diff
 print("Pinta-ala (150g): "+str(area))
+painemuutokset, tilevuusmuutokset = tilevuusmuutokset, painemuutokset
 
+print(painemuutokset)
+print(tilevuusmuutokset)
