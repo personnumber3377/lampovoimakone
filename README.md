@@ -1,0 +1,2 @@
+# lampovoimakone
+Minun laskelmiani
